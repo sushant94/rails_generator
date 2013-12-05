@@ -4,12 +4,6 @@ Rails code generator
 
 A module which generates rails code base and easy deployment
 
-== Setting up the environment
-
-Make a folder name gems in ../ path to the current repo 
-
-../gems will have it's own version of rails which is hacked according to plugin requirement. 
-
 == To run the server
 
 First run sidekiq: bundle exec sidekq
