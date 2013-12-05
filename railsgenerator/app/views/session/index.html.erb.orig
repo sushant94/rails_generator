@@ -1,0 +1,18 @@
+
+<h1> Home page </h1>
+
+<% if current_user.nil? %>
+<%= button_to "Try it as guest!", { controller:'session', action: 'guest_login' }, class: "btn btn-primary" %>
+<% else %>
+<%= button_to "Signup now!", {controller:'session', action: 'signup' }, class: "btn btn-primary" %>
+<% end %>
+<<<<<<< HEAD
+<%= link_to "trystuff", controller:'session', action: 'trystuff' %>
+<br /><br />
+<div style="overflow:hidden;margin-top:100px;border:1px solid black;margin:auto auto;width:95%;">
+<%= render partial:"shared/ckeditor" %>
+</div>
+=======
+<br/>
+<%= button_to "Try Stuff", { controller:'session', action: 'trystuff' }, class: "btn btn-primary" %>
+>>>>>>> 3941d8eb0dc2f9740b92792f41012ce591562827

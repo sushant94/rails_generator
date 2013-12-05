@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "ckeditor", media: "all" %>
+
+<div class="editor">
+    <%= text_area :editor, 1, :cols => 40 %>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    if ($('textarea').length > 0) {
+        var data = $('textarea');
+        $.each(data, function(i) {
+            CKEDITOR.replace(data[i].id);
+        });
+    }
+});
+</script>
+<%= javascript_include_tag "ckeditor" %>
