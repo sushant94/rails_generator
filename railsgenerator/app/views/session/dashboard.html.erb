@@ -1,8 +1,32 @@
-<div class="bsa well" style="padding-top:80px;">
+<div class="bsa" style="padding-top:80px;">
 <h1 style="text-align:center;">Application name: <strong><%= app_name %></strong></h1>
 <div class="container-fluid" style="margin-top:80px;">
+
     <div class="row-fluid">
-        <div class="span4">
+        <div class="span12">
+                
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">Create page</a></li>
+                <li><a href="#lB" data-toggle="tab">Section 2</a></li>
+                <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="lA">
+                  <p><%= render 'shared/ckeditor'  %></p>
+                </div>
+                <div class="tab-pane" id="lB">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="lC">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+            </div>
+
+              
+
+<!--     
 <table class="table table-bordered table-striped table-hover">
     <tr>
         <td><h4> Create a Static page</h4></td>
@@ -27,12 +51,14 @@
     </tr>
 
 </table>
+ -->
 </div>
 
-
+<!-- 
 <div class="span8">
     <h2> Preview and stuff go here </h2>
-    </div>
+    
+</div> -->
     </div>
     </div>
 </div>
