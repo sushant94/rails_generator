@@ -1,9 +1,10 @@
-<%= stylesheet_link_tag "ckeditor", media: "all" %>
+
 
 <div class="editor">
-    <%= text_area :editor, 1, :cols => 40 %>
+    <%= text_area :editor, 1, :cols => 40 , value: "<html><h1>Hello EW</h1></html>" %>
 </div>
-
+<script type="text/javascript" src="/ckeditor.js"></script>
+<script type="text/javascript" src="/adapters/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     if ($('textarea').length > 0) {
@@ -12,6 +13,7 @@ $(document).ready(function() {
             CKEDITOR.replace(data[i].id);
         });
     }
+    CKEDITOR.config.contentsCss = ['/assets/bootstrap.min.css'];
+    CKEDITOR.config.allowedContent = true;
 });
 </script>
-<%= javascript_include_tag "ckeditor" %>
